@@ -15,9 +15,9 @@ class ViewController: UIViewController {
         var numMap = [Int : Int]()
         for i in 0..<numbers.count{
             let another = target - numbers[i]
-            let targetNumber = numMap[another]
-            if (targetNumber != nil){
-                result.append([targetNumber!,i])
+            let targetIndex = numMap[another]
+            if (targetIndex != nil){
+                result.append([targetIndex!,i])
             }
             numMap[numbers[i]] = i;
         }
